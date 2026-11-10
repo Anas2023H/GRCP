@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caring for Your Dental Implants</title>
+<meta name="description" content="Production package and viewer guide for the implant care patient-education video: learning goals, scene plan, clinical accuracy checklist, pronunciation and viewer test questions.">
+<style>
+  :root {
+    --bg: #f7f9f9;
+    --surface: #ffffff;
+    --ink: #1d2a2c;
+    --muted: #5b6b6e;
+    --teal: #0f7c7c;
+    --teal-soft: #d9efef;
+    --blue-soft: #e6f0fa;
+    --line: #d7e1e2;
+    --warn: #b45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1a1b;
+      --surface: #162526;
+      --ink: #e6eeee;
+      --muted: #9fb3b5;
+      --teal: #5fd0cf;
+      --teal-soft: #173b3c;
+      --blue-soft: #1a2c3d;
+      --line: #2a3f41;
+      --warn: #f5b25c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1a1b;
+    --surface: #162526;
+    --ink: #e6eeee;
+    --muted: #9fb3b5;
+    --teal: #5fd0cf;
+    --teal-soft: #173b3c;
+    --blue-soft: #1a2c3d;
+    --line: #2a3f41;
+    --warn: #f5b25c;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header.hero {
+    background: linear-gradient(135deg, var(--teal), #3d8fb8);
+    color: #fff;
+    padding: 48px 0 40px;
+  }
+  header.hero h1 { margin: 0 0 8px; font-size: clamp(26px, 5vw, 40px); line-height: 1.2; }
+  header.hero .sub { margin: 0; opacity: .92; }
+  header.hero .ar { font-size: clamp(22px, 4vw, 30px); margin: 12px 0 0; direction: rtl; font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, sans-serif; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip {
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+  nav.toc {
+    position: sticky; top: 0; z-index: 2;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.toc ul {
+    list-style: none; margin: 0; padding: 10px 0;
+    display: flex; gap: 14px; overflow-x: auto; white-space: nowrap;
+  }
+  nav.toc a { color: var(--teal); text-decoration: none; font-size: 15px; }
+  nav.toc a:hover { text-decoration: underline; }
+  section { padding: 36px 0 8px; }
+  h2 { font-size: 24px; margin: 0 0 12px; line-height: 1.3; }
+  h3 { font-size: 19px; margin: 24px 0 8px; }
+  p { margin: 0 0 12px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .callout {
+    background: var(--teal-soft);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 0 0 16px;
+  }
+  .callout strong { color: var(--teal); }
+  .ar-text { direction: rtl; text-align: right; font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, sans-serif; font-size: 19px; line-height: 2; margin: 0; }
+  .label { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 10px 0 2px; }
+  .scene-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; justify-content: space-between; }
+  .scene-head .secs { color: var(--muted); font-size: 14px; }
+  .scene-num {
+    display: inline-block; min-width: 34px; text-align: center;
+    background: var(--teal); color: #fff; border-radius: 999px;
+    font-weight: 700; padding: 2px 8px; margin-inline-end: 8px;
+  }
+  .onscreen { color: var(--muted); }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 15px; }
+  th, td { text-align: start; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--blue-soft); font-weight: 600; }
+  td.ar, th.ar { direction: rtl; text-align: right; font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, sans-serif; font-size: 16px; }
+  .tag-varies { color: var(--warn); font-weight: 600; }
+  ol.points { padding-inline-start: 22px; }
+  ol.points li { margin-bottom: 6px; }
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .card { padding: 14px 14px; }
+    table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Caring for Your Dental Implants</h1>
+    <p class="sub">Patient-education video: production package and viewer guide</p>
+    <p class="ar">العناية بزراعة الأسنان</p>
+    <div class="meta">
+      <span class="chip">3:48 video</span>
+      <span class="chip">11 scenes</span>
+      <span class="chip">About 360 Arabic words</span>
+      <span class="chip">Prosthodontics, Riyadh Elm University</span>
+      <span class="chip">Nov 4, 2026</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#goals">Learning goals</a></li>
+      <li><a href="#scenes">Scene plan</a></li>
+      <li><a href="#accuracy">Accuracy checklist</a></li>
+      <li><a href="#pronunciation">Pronunciation</a></li>
+      <li><a href="#questions">Viewer questions</a></li>
+      <li><a href="#production">Production</a></li>
+      <li><a href="#prep">Discussion prep</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="overview">
+  <h2>Overview</h2>
+  <div class="callout">
+    <p>One message: <strong>daily cleaning protects your implant.</strong>
+    <span class="ar-text" style="display:inline;font-size:inherit">التنظيف اليومي يحمي زرعتك</span></p>
+    <p>The video covers care of <strong>fixed implants only</strong> (single implant teeth and implant bridges). Removable implant dentures are left out.</p>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>Item</th><th>Decision</th></tr></thead>
+    <tbody>
+      <tr><td>Title</td><td><span class="ar">العناية بزراعة الأسنان</span> / Caring for Your Dental Implants</td></tr>
+      <tr><td>Course</td><td>Prosthodontics, Riyadh Elm University</td></tr>
+      <tr><td>Course director</td><td>Dr. Mohammed Rayan (verify Arabic spelling)</td></tr>
+      <tr><td>Narrator</td><td>Male dentist, AI voice or a group member reading the same script</td></tr>
+      <tr><td>Language</td><td>Simplified MSA narration, English subtitles, short Arabic on-screen labels</td></tr>
+      <tr><td>Formats</td><td>16:9 (1920×1080) for the university presentation; 9:16 (1080×1920) phone copy</td></tr>
+      <tr><td>Logo</td><td>Opening and closing scenes</td></tr>
+      <tr><td>Group names</td><td>Closing scene: [NAME 1], [NAME 2], [NAME 3]</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="goals">
+  <h2>1. Learning goals</h2>
+  <p>After watching the video once, the viewer can:</p>
+  <ol class="points">
+    <li>Name at least <strong>two tools</strong> for cleaning around implants every day (soft toothbrush, interdental brush), and say how often to brush (twice a day).</li>
+    <li>Name at least <strong>three warning signs</strong> that mean they should see their dentist (for example bleeding, swelling, pain, bad taste or smell, a loose implant or tooth).</li>
+    <li>Name at least <strong>two habits that can damage implants</strong> (for example biting ice or nutshells, opening packages with the teeth, smoking).</li>
+  </ol>
+</section>
+
+<section id="scenes">
+  <h2>4. Full scene plan</h2>
+  <p>11 scenes, 3:48 total, about 360 narration words read at about 100 words a minute with short pauses.</p>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">1</span>Title and welcome</h3><span class="secs">16 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">السلام عليكم. أنا طبيب أسنان. إذا كانت في فمك زراعات أسنان، فهذا الفيديو لك. سنتعلم معاً كيف نعتني بها كل يوم، بخطوات سهلة، لتبقى سليمة سنوات طويلة.</p>
+    <p class="label">English subtitle</p>
+    <p>Peace be upon you. I am a dentist. If you have dental implants, this video is for you. Together, we will learn how to care for them every day, with easy steps, so they stay healthy for many years.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> العناية بزراعة الأسنان / Caring for Your Dental Implants (title card only)</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">2</span>What an implant is</h3><span class="secs">20 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">زرعة الأسنان قطعة صغيرة تشبه المسمار، يضعها الطبيب في عظم الفك. وتعمل مثل جذر السن. وفوقها يثبت الطبيب سناً جديداً، أو جسراً، أي عدة أسنان متصلة. وهي ثابتة، لا تُخرجها من فمك.</p>
+    <p class="label">English subtitle</p>
+    <p>A dental implant is a small, screw-like post that the dentist places in the jawbone. It works like the root of a tooth. On top of it, the dentist fixes a new tooth, or a bridge, which is several teeth joined together. It is fixed, so you do not take it out of your mouth.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> زرعة = جذر صناعي / Implant = artificial root</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">3</span>Why cleaning matters (main message)</h3><span class="secs">21 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">الزرعة لا تصاب بالتسوس، لكن اللثة حولها قد تلتهب، إذا تجمعت عليها طبقة لزجة من الجراثيم. وهذا الالتهاب قد لا يؤلم في البداية. ومع الوقت، قد يضعف العظم وتتحرك الزرعة. لذلك تذكر: التنظيف اليومي يحمي زرعتك.</p>
+    <p class="label">English subtitle</p>
+    <p>Implants do not get cavities, but the gum around them can become inflamed if a sticky layer of germs builds up. This inflammation may not hurt at first. Over time, the bone can weaken and the implant can become loose. So remember: daily cleaning protects your implant.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> التنظيف اليومي يحمي زرعتك / Daily cleaning protects your implant</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">4</span>Brushing twice a day</h3><span class="secs">23 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">نظّف فمك مرتين كل يوم، في الصباح وقبل النوم. استخدم فرشاة ناعمة ومعجوناً لطيفاً. حرّك الفرشاة بهدوء عند حد اللثة حول كل زرعة. ولا تنسَ الجهة الداخلية، القريبة من اللسان. وإذا صعب عليك إمساك الفرشاة، فالفرشاة الكهربائية تساعدك.</p>
+    <p class="label">English subtitle</p>
+    <p>Clean your mouth twice a day, in the morning and before bed. Use a soft toothbrush and a gentle toothpaste. Move the brush gently along the gumline, around each implant. Do not forget the inner side, near the tongue. If holding a brush is hard for you, an electric toothbrush can help.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> مرتين يومياً / Twice a day</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">5</span>Cleaning between implants</h3><span class="secs">21 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">بين الزرعات، وتحت الجسور، تختبئ بقايا الطعام. هنا نستخدم فرشاة صغيرة جداً، اسمها فرشاة ما بين الأسنان. أدخلها بلطف، وحرّكها ذهاباً وإياباً، مرة في اليوم على الأقل. واطلب من طبيبك أن يختار لك المقاس المناسب.</p>
+    <p class="label">English subtitle</p>
+    <p>Food hides between implants and under bridges. Here we use a very small brush called an interdental brush. Put it in gently and move it back and forth, at least once a day. Ask your dentist to choose the right size for you.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> فرشاة ما بين الأسنان / Interdental brush</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">6</span>Cleaning under bridges, extra tools</h3><span class="secs">18 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">وتحت الجسر، يمكنك استخدام خيط خاص له طرف قاسٍ يمرّ تحت الجسر بسهولة. وهناك جهاز يرشّ الماء، يساعد من يجد صعوبة في استخدام يديه. اسأل طبيبك: أي الأدوات أنسب لك؟</p>
+    <p class="label">English subtitle</p>
+    <p>Under a bridge, you can use a special floss with a stiff end that passes under the bridge easily. There is also a device that sprays water, which helps people who find it hard to use their hands. Ask your dentist which tools suit you best.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> خيط خاص / Special floss, then جهاز رش الماء / Water flosser</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">7</span>Night-time habits</h3><span class="secs">20 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">قبل النوم، لا تنسَ تنظيف زراعاتك جيداً. وإذا كنت تضغط على أسنانك أو تصرّ عليها وأنت نائم، فقد يصنع لك طبيبك واقياً ليلياً، وهو غطاء تلبسه على أسنانك. البسه كل ليلة، فهو يحمي زراعاتك.</p>
+    <p class="label">English subtitle</p>
+    <p>Before bed, do not forget to clean your implants well. If you clench or grind your teeth while you sleep, your dentist may make you a night guard, which is a cover you wear over your teeth. Wear it every night, because it protects your implants.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> واقٍ ليلي / Night guard</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">8</span>Things to avoid</h3><span class="secs">21 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">لا تعضّ على الأشياء القاسية، مثل الثلج وقشور المكسرات. ولا تفتح بأسنانك الأغطية والأكياس. وتجنّب الفُرش والمعاجين الخشنة، وأعواد الأسنان الحادة. واعلم أن التدخين يضر اللثة حول الزراعات. وإن كنت تدخن، فاطلب المساعدة للإقلاع.</p>
+    <p class="label">English subtitle</p>
+    <p>Do not bite on hard things, such as ice and nutshells, and do not open lids or bags with your teeth. Avoid rough brushes and toothpastes, and sharp toothpicks. And know that smoking harms the gums around implants. If you smoke, ask for help to quit.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> ✕ ثلج / Ice, ✕ مكسرات / Nutshells, ✕ أغطية / Lids, ✕ خشن / Rough, ✕ أعواد / Toothpicks, ✕ تدخين / Smoking</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">9</span>Warning signs</h3><span class="secs">22 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">راجِع طبيبك إذا لاحظت نزيفاً أو تورّماً في اللثة، أو ألماً، أو طعماً سيئاً، أو رائحة كريهة. وراجعه أيضاً إذا شعرت أن الزرعة أو السن فوقها يتحرك، أو انكسر جزء منها. ولا تنتظر حتى يشتد الألم.</p>
+    <p class="label">English subtitle</p>
+    <p>See your dentist if you notice bleeding or swelling in your gums, pain, a bad taste, or a bad smell. See your dentist too if the implant or the tooth on it feels loose, or if part of it breaks. Do not wait until the pain gets worse.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> علامات الخطر / Warning signs</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">10</span>Regular check-ups</h3><span class="secs">19 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">وحتى لو كنت مرتاحاً، زر طبيبك بانتظام، غالباً كل ستة أشهر، فالزرعة تحتاج عناية مدى الحياة. سيفحص الزراعات، وقد يصوّرها بالأشعة، وينظّفها بأدوات خاصة. وأخبره عن صحتك وأدويتك، مثل مرض السكري.</p>
+    <p class="label">English subtitle</p>
+    <p>Even if you feel fine, visit your dentist regularly, usually every six months, because implants need care for life. Your dentist will check your implants, may take an X-ray, and will clean them with special tools. Also tell your dentist about your health and medicines, such as diabetes.</p>
+    <p class="onscreen"><strong>On-screen text:</strong> كل ٦ أشهر / Every 6 months</p>
+  </div>
+
+  <div class="card">
+    <div class="scene-head"><h3><span class="scene-num">11</span>3 points to remember and credits</h3><span class="secs">27 s</span></div>
+    <p class="label">Arabic narration</p>
+    <p class="ar-text">تذكّر ثلاث نقاط: أولاً: نظّف حول زراعاتك مرتين كل يوم. ثانياً: استخدم الفرشاة الصغيرة بين الزراعات. ثالثاً: زر طبيبك بانتظام، وفوراً عند أي علامة خطر. اعتنِ بزراعتك، تدُم معك. دمتم بصحة وعافية.</p>
+    <p class="label">English subtitle</p>
+    <p>Remember three points. One: clean around your implants twice a day. Two: use the small brush between your implants. Three: see your dentist regularly, and right away if you notice any warning sign. Care for your implant, and it will last. Stay healthy and well.</p>
+    <p class="onscreen"><strong>On-screen text (points):</strong> ١ نظّف مرتين يومياً / Clean twice daily; ٢ الفرشاة الصغيرة / Small brush; ٣ زُر طبيبك / See your dentist</p>
+    <p class="onscreen"><strong>Credits card:</strong> Riyadh Elm University · Prosthodontics · Course director: Dr. Mohammed Rayan · Prepared by: [NAME 1], [NAME 2], [NAME 3] · AI tools were used to create images [TOOL], animation [TOOL], voice-over [TOOL] and music [TOOL]. All content was reviewed by the student team.</p>
+  </div>
+</section>
+
+<section id="accuracy">
+  <h2>5. Clinical accuracy checklist</h2>
+  <p>33 claims to check. <span class="tag-varies">Varies</span> marks a point where guidance or clinical practice differs; agree the wording with your course director before recording.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Scene</th><th>Claim in the script</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>2</td><td>A dental implant is a screw-like post placed in the jawbone that works like a tooth root</td><td></td></tr>
+      <tr><td>2</td><td>2</td><td>An implant can carry a single crown or a bridge (several joined teeth)</td><td></td></tr>
+      <tr><td>3</td><td>2</td><td>These restorations are fixed; the patient does not take them out</td><td>Screw-retained ones can be removed by the dentist only</td></tr>
+      <tr><td>4</td><td>3</td><td>Implants do not get dental caries</td><td>True for the implant and crown; remaining natural teeth still can</td></tr>
+      <tr><td>5</td><td>3</td><td>Plaque buildup can inflame the gum around an implant (peri-implant mucositis)</td><td></td></tr>
+      <tr><td>6</td><td>3</td><td>This inflammation may not hurt at first</td><td>Peri-implant disease is often painless in early stages</td></tr>
+      <tr><td>7</td><td>3</td><td>Over time this can lead to bone loss and a loose implant (peri-implantitis)</td><td>Simplified; mobility is a late sign</td></tr>
+      <tr><td>8</td><td>3, 11</td><td>Daily cleaning protects the implant</td><td>Plaque control is the main preventive measure; not a guarantee</td></tr>
+      <tr><td>9</td><td>4</td><td>Clean twice a day, morning and before bed</td><td></td></tr>
+      <tr><td>10</td><td>4</td><td>Use a soft toothbrush and gentle, low-abrasive toothpaste</td><td><span class="tag-varies">Varies:</span> some advise avoiding whitening or highly abrasive pastes on implant crowns</td></tr>
+      <tr><td>11</td><td>4</td><td>Brush gently along the gumline around each implant</td><td></td></tr>
+      <tr><td>12</td><td>4</td><td>Clean the inner (tongue) side too</td><td></td></tr>
+      <tr><td>13</td><td>4</td><td>An electric toothbrush helps people with limited hand dexterity</td><td></td></tr>
+      <tr><td>14</td><td>5</td><td>Food and plaque collect between implants and under bridges</td><td></td></tr>
+      <tr><td>15</td><td>5</td><td>Use an interdental brush gently, back and forth</td><td><span class="tag-varies">Varies:</span> many recommend nylon-coated wire brushes for implants</td></tr>
+      <tr><td>16</td><td>5</td><td>Use it at least once a day</td><td><span class="tag-varies">Varies:</span> some sources advise once daily, others with every brushing</td></tr>
+      <tr><td>17</td><td>5</td><td>The dentist should choose the right brush size</td><td>Size should fit the space without force</td></tr>
+      <tr><td>18</td><td>6</td><td>A floss with a stiff threading end (for example super floss) cleans under a bridge</td><td></td></tr>
+      <tr><td>19</td><td>6</td><td>A water flosser helps people who find hand cleaning hard</td><td><span class="tag-varies">Varies:</span> an aid, not a replacement for brushing; evidence of added benefit is mixed</td></tr>
+      <tr><td>20</td><td>7</td><td>Clean implants well before bed</td><td></td></tr>
+      <tr><td>21</td><td>7</td><td>People who clench or grind may be given a night guard that protects the implants</td><td><span class="tag-varies">Varies:</span> evidence linking bruxism to implant failure is mixed, but night guards are commonly recommended</td></tr>
+      <tr><td>22</td><td>8</td><td>Biting hard things (ice, nutshells) or opening packages with the teeth can damage implant teeth</td><td>Risks chipping the crown or loosening the screw</td></tr>
+      <tr><td>23</td><td>8</td><td>Avoid rough brushes and abrasive toothpastes</td><td><span class="tag-varies">Varies:</span> see #10</td></tr>
+      <tr><td>24</td><td>8</td><td>Avoid sharp toothpicks</td><td><span class="tag-varies">Varies:</span> can injure the gum around implants; some clinicians accept soft wooden or rubber picks</td></tr>
+      <tr><td>25</td><td>8</td><td>Smoking harms the gums around implants</td><td>Established risk factor for peri-implantitis</td></tr>
+      <tr><td>26</td><td>8</td><td>Smokers should ask for help to quit</td><td></td></tr>
+      <tr><td>27</td><td>9</td><td>Bleeding, swelling, pain, bad taste or smell mean see the dentist</td><td>Bleeding is a key sign of peri-implant disease</td></tr>
+      <tr><td>28</td><td>9</td><td>A loose implant or tooth, or a broken part, means see the dentist</td><td>A loose crown is often a loose screw; a loose implant is more serious</td></tr>
+      <tr><td>29</td><td>9</td><td>Do not wait until pain gets worse</td><td></td></tr>
+      <tr><td>30</td><td>10</td><td>Visit the dentist regularly, usually every 6 months</td><td><span class="tag-varies">Varies:</span> recall is usually 3–12 months depending on risk</td></tr>
+      <tr><td>31</td><td>10</td><td>Implants need care for life</td><td></td></tr>
+      <tr><td>32</td><td>10</td><td>Check-ups may include an X-ray and professional cleaning with special tools</td><td><span class="tag-varies">Varies:</span> X-ray frequency follows clinical need, not every visit</td></tr>
+      <tr><td>33</td><td>10</td><td>Patients should tell the dentist about their health and medicines, such as diabetes</td><td>Poorly controlled diabetes is linked to higher peri-implant disease risk</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="pronunciation">
+  <h2>6. Pronunciation guide</h2>
+  <p>If an AI voice mispronounces a word, paste the fully voweled form from this table into that sentence.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Term</th><th class="ar">With تشكيل</th><th>Transliteration</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="ar">زراعة الأسنان</td><td class="ar">زِرَاعَةُ الأَسْنَانِ</td><td>ziraa'at al-asnaan</td><td>dental implants</td></tr>
+      <tr><td class="ar">زرعة / زرعات</td><td class="ar">زَرْعَة / زَرْعَات</td><td>zar'a / zara'aat</td><td>an implant / implants</td></tr>
+      <tr><td class="ar">عظم الفك</td><td class="ar">عَظْمُ الفَكِّ</td><td>'adhm al-fakk</td><td>jawbone</td></tr>
+      <tr><td class="ar">جذر السن</td><td class="ar">جِذْرُ السِّنِّ</td><td>jidhr as-sinn</td><td>tooth root</td></tr>
+      <tr><td class="ar">جسر</td><td class="ar">جِسْر</td><td>jisr</td><td>bridge</td></tr>
+      <tr><td class="ar">اللثة</td><td class="ar">اللِّثَة</td><td>al-litha</td><td>gums</td></tr>
+      <tr><td class="ar">التسوس</td><td class="ar">التَّسَوُّس</td><td>at-tasawwus</td><td>tooth decay</td></tr>
+      <tr><td class="ar">تلتهب / الالتهاب</td><td class="ar">تَلْتَهِب / الِالْتِهَاب</td><td>taltahib / al-iltihaab</td><td>becomes inflamed / inflammation</td></tr>
+      <tr><td class="ar">الجراثيم</td><td class="ar">الجَرَاثِيم</td><td>al-jaraatheem</td><td>germs</td></tr>
+      <tr><td class="ar">فرشاة ما بين الأسنان</td><td class="ar">فُرْشَاةُ مَا بَيْنَ الأَسْنَان</td><td>furshaatu maa bayna al-asnaan</td><td>interdental brush</td></tr>
+      <tr><td class="ar">خيط خاص</td><td class="ar">خَيْطٌ خَاصّ</td><td>khaytun khaass</td><td>special floss</td></tr>
+      <tr><td class="ar">جهاز يرش الماء</td><td class="ar">جِهَازٌ يَرْشُّ المَاء</td><td>jihaazun yarushshu al-maa'</td><td>water flosser</td></tr>
+      <tr><td class="ar">تصرّ على أسنانك</td><td class="ar">تَصِرُّ عَلَى أَسْنَانِك</td><td>tasirru 'alaa asnaanik</td><td>grind your teeth</td></tr>
+      <tr><td class="ar">واقٍ ليلي</td><td class="ar">وَاقِيًا لَيْلِيًّا (read as accusative)</td><td>waaqiyan layliyyan</td><td>night guard</td></tr>
+      <tr><td class="ar">المكسرات</td><td class="ar">المُكَسَّرَات</td><td>al-mukassaraat</td><td>nuts</td></tr>
+      <tr><td class="ar">أعواد الأسنان</td><td class="ar">أَعْوَادُ الأَسْنَان</td><td>a'waad al-asnaan</td><td>toothpicks</td></tr>
+      <tr><td class="ar">الإقلاع</td><td class="ar">الإِقْلَاع</td><td>al-iqlaa'</td><td>quitting (smoking)</td></tr>
+      <tr><td class="ar">تورم</td><td class="ar">تَوَرُّم</td><td>tawarrum</td><td>swelling</td></tr>
+      <tr><td class="ar">نزيف</td><td class="ar">نَزِيف</td><td>nazeef</td><td>bleeding</td></tr>
+      <tr><td class="ar">الأشعة</td><td class="ar">الأَشِعَّة</td><td>al-ashi''a</td><td>X-ray</td></tr>
+      <tr><td class="ar">السكري</td><td class="ar">السُّكَّرِيّ</td><td>as-sukkari</td><td>diabetes</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:12px">Note: in scene 7, واقياً ليلياً is read with the accusative ending (waaqiyan layliyyan); in the on-screen label it is واقٍ ليلي.</p>
+</section>
+
+<section id="questions">
+  <h2>7. Elderly viewer test questions</h2>
+  <p>Ask these out loud, one at a time, right after one viewing. Write down the answer in their words and note any hesitation.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th class="ar">Arabic</th><th>English</th><th>Checks</th><th>Good answer</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="ar">ما أهمُّ شيءٍ تتذكّره من الفيديو؟</td><td>What is the most important thing you remember from the video?</td><td>Main message</td><td>Clean your implants every day</td></tr>
+      <tr><td>2</td><td class="ar">ماذا تستخدم لتنظيف ما بين الزرعات؟</td><td>What do you use to clean between your implants?</td><td>Goal 1</td><td>Small interdental brush (or special floss)</td></tr>
+      <tr><td>3</td><td class="ar">اذكر علامتين تجعلاك تذهب إلى طبيب الأسنان.</td><td>Name two signs that mean you should go to the dentist.</td><td>Goal 2</td><td>Bleeding, swelling, pain, bad taste or smell, looseness</td></tr>
+      <tr><td>4</td><td class="ar">اذكر شيئين يجب أن تتجنّبهما لتحمي زراعاتك.</td><td>Name two things you should avoid to protect your implants.</td><td>Goal 3</td><td>Biting hard things, opening packages with teeth, smoking, rough brushes</td></tr>
+      <tr><td>5</td><td class="ar">هل كان هناك شيء صعب الفهم، أو سريع، أو صعب القراءة أو السماع؟</td><td>Was anything hard to understand, too fast, or hard to read or hear?</td><td>Accessibility</td><td>Open feedback</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:12px">Test with at least 3 older adults if you can, and fix any scene that 2 or more people missed.</p>
+</section>
+
+<section id="production">
+  <h2>8. Production notes</h2>
+  <p>Build one 16:9 master, then make the phone copy from it. Free tiers and limits change often, so check each tool's current plan and licence before you start.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Job</th><th>Options</th><th>Tip</th></tr></thead>
+    <tbody>
+      <tr><td>Images</td><td>Google Gemini image generation, Leonardo.ai, Microsoft Designer / Bing Image Creator, Canva Magic Media</td><td>Make the 4 character portraits first, then reuse them as reference images</td></tr>
+      <tr><td>Animation</td><td>CapCut keyframes (pan, zoom, slide), Canva animations; for short motion clips: Kling, Runway, Pika or Google Veo (verify free credits)</td><td>Most scenes only need slow zooms and slides; save AI video for scenes 1, 4 and 6</td></tr>
+      <tr><td>Male AI voice</td><td>Microsoft Azure / Edge Read Aloud Saudi male voice (ar-SA-HamedNeural, verify name), ElevenLabs Arabic voices, CapCut text-to-speech</td><td>Generate one scene at a time so you can fix a single sentence</td></tr>
+      <tr><td>Music</td><td>YouTube Audio Library, Pixabay Music, CapCut's built-in library, or AI music (Suno, Udio)</td><td>Check the licence allows educational and public use; soft piano or ambient, no lyrics</td></tr>
+      <tr><td>Fonts</td><td>Cairo, Tajawal or IBM Plex Sans Arabic (free, Google Fonts)</td><td>Bold weight for labels</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Editing tips (CapCut or Canva)</h3>
+  <ul>
+    <li><strong>Captions:</strong> English subtitles bottom-center, white on a 60–70% black box, at least 54 px at 1080p, max 2 lines of about 40 characters. Arabic labels bold, 90–120 px, high contrast, top or upper-middle so they never overlap subtitles.</li>
+    <li><strong>Pacing:</strong> one scene per idea, 1–1.5 seconds of silence between scenes, keep each Arabic label on screen for its whole scene, hold the 3-points screen at least 4 seconds after the last point.</li>
+    <li><strong>Transitions:</strong> simple 0.5-second cross-dissolves only; no spins, flashes or fast zooms.</li>
+    <li><strong>Audio:</strong> voice clear and loud, music about 25–30 dB below it (about 10–15% volume in CapCut), no music under the warning signs scene.</li>
+    <li><strong>Contrast check:</strong> watch the export on a phone at half brightness; if a caption is hard to read, enlarge it.</li>
+  </ul>
+
+  <h3>Two formats</h3>
+  <div class="scroll"><table>
+    <thead><tr><th></th><th>University presentation</th><th>Phone copy</th></tr></thead>
+    <tbody>
+      <tr><td>Size</td><td>1920×1080, 16:9</td><td>1080×1920, 9:16</td></tr>
+      <tr><td>Framing</td><td>As generated</td><td>Crop to the centered subject (prompts leave side space for this); diagrams scale to fit width with soft background above and below</td></tr>
+      <tr><td>Captions</td><td>Bottom-center</td><td>Lower third, raised above the phone's on-screen buttons; slightly larger</td></tr>
+      <tr><td>Scene 11</td><td>Cards beside the dentist</td><td>Cards stacked below the dentist</td></tr>
+      <tr><td>Export</td><td>MP4, H.264, 1080p, 30 fps; keep a backup copy on a USB drive for the presentation</td><td>MP4, 1080p, under 100 MB for WhatsApp sharing</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="prep">
+  <h2>9. Presentation and discussion prep</h2>
+  <p>The discussion is worth 20 points. Short answers to confirm against your references:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Question</th><th>Short answer to verify</th></tr></thead>
+    <tbody>
+      <tr><td>Why this topic for older adults?</td><td>Many older adults have implants, and poor home care is a main cause of peri-implant disease</td></tr>
+      <tr><td>Why did you focus on fixed implants only?</td><td>To keep one clear message in under 4 minutes; removable implant dentures need a separate care routine</td></tr>
+      <tr><td>What is the difference between peri-implant mucositis and peri-implantitis?</td><td>Mucositis is reversible soft-tissue inflammation; peri-implantitis adds progressive bone loss</td></tr>
+      <tr><td>Why can implants fail even though they do not decay?</td><td>Plaque causes inflammation of the surrounding tissues, which can lead to bone loss</td></tr>
+      <tr><td>Why recommend interdental brushes?</td><td>Plaque collects between implants and under bridges where a toothbrush cannot reach</td></tr>
+      <tr><td>Why a night guard?</td><td>Clenching and grinding put extra load on implants and crowns; evidence is mixed (checklist #21)</td></tr>
+      <tr><td>Why a 6-month recall?</td><td>Common default; recall should be set by risk, often 3–12 months (#30)</td></tr>
+      <tr><td>How did you make it suitable for elderly viewers?</td><td>Simple MSA, one idea per scene, terms explained, large high-contrast captions, slow pace, 3 points to remember, tested with older adults</td></tr>
+      <tr><td>How did you use AI, and how did you check accuracy?</td><td>AI made the images, motion and voice; every clinical claim was checked against textbooks and guidelines; credits list the tools</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:12px">Assign each group member three questions to prepare, so everyone can answer confidently.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Riyadh Elm University · Prosthodontics · Course director: Dr. Mohammed Rayan · Prepared by: [NAME 1], [NAME 2], [NAME 3]<br>
+    Clinical claims are listed for checking against current references before recording. Items marked “Varies” need agreement with the course director.
+  </div>
+</footer>
+
+</body>
+</html>
